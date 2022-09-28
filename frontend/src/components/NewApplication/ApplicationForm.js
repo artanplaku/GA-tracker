@@ -4,9 +4,9 @@ import "../UI/ApplicationForm.css";
 function ApplicationForm() {
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredCompanyName, setEnteredCompanyName] = useState("");
-  const [enteredposition, setEnteredpositon] = useState("");
-  const [enterednotes, setEnterednotes] = useState("");
-  const [enteredStatus, setEnteredstatus] = useState("");
+  const [enteredPosition, setEnteredPosition] = useState("");
+  const [enteredNotes, setEnteredNotes] = useState("");
+  const [enteredStatus, setEnteredStatus] = useState("");
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
@@ -17,15 +17,15 @@ function ApplicationForm() {
   };
 
   const positionChangeHandler = (event) => {
-    setEnteredpositon(event.target.value);
+    setEnteredPosition(event.target.value);
   };
 
   const notesChangeHandler = (event) => {
-    setEnterednotes(event.target.value);
+    setEnteredNotes(event.target.value);
   };
 
   const statusChangeHandler = (event) => {
-    setEnteredstatus(event.target.value);
+    setEnteredStatus(event.target.value);
   };
 
   const submitHandler = (event) => {
@@ -34,36 +34,49 @@ function ApplicationForm() {
     const applicationData = {
       date: new Date(enteredDate),
       companyName: enteredCompanyName,
-      position: enteredposition,
-      notes: enterednotes,
-      status: enteredStatus
+      position: enteredPosition,
+      notes: enteredNotes,
+      status: enteredStatus,
+    };
+    setEnteredDate('');
+    setEnteredCompanyName('');
+    setEnteredPosition('');
+    setEnteredNotes('');
+    setEnteredStatus('');
 
-
-    }
-
-  }
+  };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-application__controls">
         <div className="new-application__control">
           <label>Date</label>
-          <input type="date" onChange={dateChangeHandler} />
+          <input type="date"
+            value={enteredDate}
+            onChange={dateChangeHandler} />
         </div>
         <div className="new-application__control">
           <label>Company Name</label>
-          <input type="text" onChange={companyNameChangeHandler} />
+          <input type="text"
+            value={enteredCompanyName}
+            onChange={companyNameChangeHandler} />
         </div>
         <div className="new-application__control">
           <label>Position</label>
-          <input type="text" onChange={positionChangeHandler} />
+          <input type="text"
+            value={enteredPosition}
+            onChange={positionChangeHandler} />
         </div>
         <div className="new-application__control">
           <label>Notes</label>
-          <input type="text" onChange={notesChangeHandler} />
+          <input type="text"
+            value={enteredNotes}
+            onChange={notesChangeHandler} />
         </div>
         <div className="new-application__control">
           <label>Status</label>
-          <input type="text" onChange={statusChangeHandler} />
+          <input type="text"
+            value={enteredStatus}
+            onChange={statusChangeHandler} />
         </div>
       </div>
       <div className="new-application__actions">
