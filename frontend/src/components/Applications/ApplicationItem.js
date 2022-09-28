@@ -2,6 +2,7 @@ import React from "react";
 import ApplicationDate from "./ApplicationDate";
 import "../UI/ApplicationItem.css";
 
+
 function ApplicationItem(props) {
   return (
     <div className="application-item">
