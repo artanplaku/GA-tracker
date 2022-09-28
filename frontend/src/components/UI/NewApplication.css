@@ -1,0 +1,39 @@
+.new-application {
+  background-color: #9b9696;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-application button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #2a2a2a;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.new-application button:hover,
+.new-application button:active {
+  background-color: #878484;
+  border-color: #878484;
+  ;
+}
+
+.new-application button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.new-application button.alternative:hover,
+.new-application button.alternative:active {
+  background-color: #d6d3d3;
+}

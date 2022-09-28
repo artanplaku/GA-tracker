@@ -1,6 +1,6 @@
 import React from "react";
 import ApplicationDate from "./ApplicationDate";
-import "./styles/ApplicationItem.css";
+import "../UI/ApplicationItem.css";
 
 function ApplicationItem(props) {
   return (
@@ -14,6 +14,7 @@ function ApplicationItem(props) {
           <h2>{props.status}</h2>
         </div>
       </div>
+
     </div>
   );
 }

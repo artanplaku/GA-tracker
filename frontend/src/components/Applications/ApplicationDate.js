@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/ApplicationDate.css";
+import "../UI/ApplicationDate.css";
 
 function ApplicationDate(props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
