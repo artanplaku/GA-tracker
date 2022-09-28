@@ -27,8 +27,23 @@ function ApplicationForm() {
   const statusChangeHandler = (event) => {
     setEnteredstatus(event.target.value);
   };
+
+  const submitHandler = (event) => {
+    event.preventDeafault();
+
+    const applicationData = {
+      date: new Date(enteredDate),
+      companyName: enteredCompanyName,
+      position: enteredposition,
+      notes: enterednotes,
+      status: enteredStatus
+
+
+    }
+
+  }
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-application__controls">
         <div className="new-application__control">
           <label>Date</label>
