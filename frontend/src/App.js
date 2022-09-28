@@ -1,31 +1,22 @@
-import React from "react";
-import Applications from "./components/Applications/Applications";
-import NewApplication from "./components/NewApplication/NewApplication";
+import './App.css';
+import { Routes, Route } from "react-router-dom"
+import Register from './components/Register';
+import Login from './components/Login';
+import Home from './components/Home';
+
 
 function App() {
-  const applications = [
-    {
-      date: new Date(2002, 9, 27),
-      companyName: "Company Name 1",
-      status: "Applied",
-      position: "Front-End-Developer",
-      notes: "Remote"
-    },
-    {
-      date: new Date(2002, 7, 27),
-      companyName: "Company Name 2",
-      status: "Applied",
-      position: "Back-End-Developer",
-      notes: "On-site"
-    }
-  ]
   return (
     <div>
-      <NewApplication />
-      <Applications items={applications} />
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
 
+      </Routes>
     </div>
-  )
+
+  );
 }
 
 export default App;

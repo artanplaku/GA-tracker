@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../UI/ApplicationForm.css";
 
-function ApplicationForm() {
+function ApplicationForm(props) {
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredCompanyName, setEnteredCompanyName] = useState("");
   const [enteredPosition, setEnteredPosition] = useState("");
@@ -32,12 +32,14 @@ function ApplicationForm() {
     event.preventDeafault();
 
     const applicationData = {
+
       date: new Date(enteredDate),
       companyName: enteredCompanyName,
       position: enteredPosition,
       notes: enteredNotes,
       status: enteredStatus,
     };
+    props.onSaveApplicationData(applicationData);
     setEnteredDate('');
     setEnteredCompanyName('');
     setEnteredPosition('');
