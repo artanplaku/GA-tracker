@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import "../UI/ApplicationForm.css";
+import React, { useState } from 'react'
+import '../UI/ApplicationForm.css'
 
-const ApplicationForm = (props) => {
-  const [entredDate, setEnteredDate] = useState("");
-  const [enteredcompanyName, setEnteredCompanyName] = useState("");
+function ApplicationForm(props) {
+
+  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredCompanyName, setEnteredCompanyName] = useState("");
   const [entredPosition, setEnteredPosition] = useState("");
   const [entredNotes, setEnteredNotes] = useState("");
   const [entredStatus, setEnteredStatus] = useState("");
@@ -28,10 +29,10 @@ const ApplicationForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const expenseData = {
-      date: new Date(entredDate),
-      companyName: enteredcompanyName,
-      positon: setEnteredPosition,
+    const applicationData = {
+      date: new Date(enteredDate),
+      companyName: enteredCompanyName,
+      position: setEnteredPosition,
       notes: setEnteredNotes,
       status: setEnteredStatus
 
@@ -39,7 +40,7 @@ const ApplicationForm = (props) => {
 
 
     };
-    props.onSaveExpenseData(expenseData);
+    props.onSaveApplicationData(applicationData);
     setEnteredDate('');
     setEnteredCompanyName('');
     setEnteredPosition('');
@@ -51,17 +52,17 @@ const ApplicationForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="new-application__controls">
         <div className="new-application__controls">
-          <div className="new-expense__controls">
+          <div className="new-application__controls">
             <label>Date</label>
             <input
               type="date"
-              value={entredDate}
+              value={enteredDate}
               onChange={dateChangeHandler}
             />
           </div>
           <label>Company Name</label>
           <input type="text"
-            value={enteredcompanyName}
+            value={enteredCompanyName}
             onChange={companyNameChangeHandler} />
         </div>
 
@@ -95,4 +96,6 @@ const ApplicationForm = (props) => {
     </form>
   );
 };
+
+
 export default ApplicationForm;

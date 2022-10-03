@@ -28,7 +28,7 @@ const NewApplication = (props) => {
       )}
       {isEditing && (
         <ApplicationForm
-          onSaveExpenseData={saveApplicationDataHandler}
+          onSaveApplicationData={saveApplicationDataHandler}
           onCancel={stopEditingHandler}
         />
       )}
