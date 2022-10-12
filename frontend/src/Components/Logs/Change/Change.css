@@ -1,0 +1,15 @@
+.change {
+  width: 60px;
+  height: 80px;
+  display: flex;
+  background-color: red;
+  flex-direction: column;
+  padding: 5px auto;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.change button {
+  width: 60px;
+  margin: 2px auto;
+}
