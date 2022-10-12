@@ -1,0 +1,19 @@
+.content {
+
+  flex: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.company {
+  font-size: 16px;
+  color: #194B49;
+}
+
+.position {
+  color: rgb(64, 142, 45);
+}
+
+.status {
+  color: #D62828;
+}
