@@ -1,18 +1,46 @@
 import React from 'react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-//   const handleRegister = axios call
+const handleRegister = async(e) =>{
+    e.preventDefault();
+console.log(name)
+console.log(email)
+console.log(password)
+
+
+    const req = await fetch("https://localhost:4000/api/register", {
+       method: "POST",
+       headers: {"Content-Type": "application/json"},
+       body: await JSON.stringify({
+        name, 
+        email,
+        password,
+       }), 
+    });
+
+    const data =  await req.json();
+
+    if (data.status === "ok") {
+        navigate("/login");
+    } else {
+        alert("Duplicate Email");
+    }
+
+
+}
 
   return (
     <div>
       <h1>Register</h1>
-      <form >
-      {/* onSubmit={handleRegister} */}
+      <form onSubmit={handleRegister}>
+      
         <input
           placeholder="Name"
           type="text"
