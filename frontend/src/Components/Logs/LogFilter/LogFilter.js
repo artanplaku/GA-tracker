@@ -21,7 +21,7 @@ const LogFilter = (props) => {
       </div>
       <div>
         Status:<select value={props.status} onChange={changStatusHandler}>
-          <option value="wait">waiting</option>
+          <option value="wait">pending</option>
           <option value="offer">offer</option>
           <option value="reject">reject</option>
         </select>

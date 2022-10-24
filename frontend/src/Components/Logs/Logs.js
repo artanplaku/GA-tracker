@@ -28,7 +28,7 @@ const Logs = (props) => {
 
   //filter data, only show one year data
   const [year, setYear] = useState(2022)
-  const [newStatus, setNewStatus] = useState("waiting")
+  const [newStatus, setNewStatus] = useState("pending")
   const changeYearHandler = (year) => {
     setYear(year)
   }
