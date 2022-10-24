@@ -11,28 +11,28 @@ const Home = () => {
       date: new Date(2021, 9, 28, 17, 32),
       company: "Google",
       position: "software engineer",
-      status: "waiting"
+      status: "pending"
     },
     {
       id: 2,
       date: new Date(2022, 2, 14, 17, 32),
       company: "Apple",
       position: "learn javascript",
-      status: "waiting"
+      status: "pending"
     },
     {
       id: 3,
       date: new Date(2021, 9, 15, 17, 32),
       company: "Amazon",
       position: "learn html",
-      status: "waiting"
+      status: "pending"
     },
     {
       id: 4,
       date: new Date(2020, 9, 28, 17, 32),
       company: "Ciry goverment",
       position: "software engineer",
-      status: "waiting"
+      status: "pending"
     },
   ]
   const [logsData, setLogsDate] = useState(logsDataOriginal)
