@@ -17,9 +17,9 @@ const Change = (props) => {
 
   return (
     <div className='change'>
-      <button onClick={waitChange}>waiting</button>
-      <button onClick={offerChange}>offer</button>
-      <button onClick={rejectChange}>reject</button>
+      <button onClick={waitChange}>Pending</button>
+      <button onClick={offerChange}>Offer</button>
+      <button onClick={rejectChange}>Reject</button>
     </div>
   )
 }
